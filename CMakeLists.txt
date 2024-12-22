@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.22)
+project(socket)
+set(COMMON_DIR ${PROJECT_SOURCE_DIR}/Common)
+include_directories(${COMMON_DIR})
+set(COMMON_SRC ${COMMON_DIR}/common.cpp ${COMMON_DIR}/common.h)
+add_definitions(-DSOURCE_DIR="${CMAKE_SOURCE_DIR}")
+add_subdirectory(unix)
